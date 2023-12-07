@@ -1,0 +1,118 @@
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to right, #a6c0fe, #f0f0f0);
+}
+
+.login-box {
+  position: relative;
+  width: 600px;
+  height: 500px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #92b1f9, #f19999);
+}
+.login-box form {
+  width: 80%;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  margin: 30px 0;
+  border-bottom: 2px solid white;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translate(-50%);
+  font-size: 1em;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+}
+.input-box input {
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  line-height: 57px;
+}
+.remeber-forgot {
+  margin: -15px 0 15px;
+  font-size: 0.9em;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.remeber-forgot label input {
+  margin-right: 3px;
+}
+
+.remeber-forgot a {
+  color: white;
+  text-decoration: none;
+}
+.remeber-forgot a:hover {
+  text-decoration: underline;
+}
+
+.login-box form button {
+  width: 100%;
+  height: 40px;
+  background: #4fb3d4;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1em;
+  color: #000;
+  font-weight: bold;
+  color: white;
+}
+
+.register-link {
+  font-size: 0.9em;
+  color: white;
+  text-align: center;
+  margin: 25px 0 10px;
+}
+
+.register-link p a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link p a:hover {
+  text-decoration: underline;
+}
+.login-notifi {
+  text-align: center;
+  color: rgb(19, 129, 19);
+  font-size: 20px;
+  background: linear-gradient(to right, #cdd6ea, #eaaeae);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 7px;
+}

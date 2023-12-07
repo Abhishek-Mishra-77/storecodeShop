@@ -1,0 +1,77 @@
+.payment-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #e3e6f3;
+  box-shadow: 0 40px 60px rgba(0, 0, 0, 0.01);
+  padding: 80px 0 0 10px;
+  transition: 0.6s;
+  /* transform: translateY(100%); */
+  z-index: 999;
+}
+.payment-inner {
+  display: flex;
+  flex-direction: column;
+  padding: 95px 95px 95px 95px;
+}
+.payment-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.payment-left h1 {
+  font-size: 55px;
+}
+
+.payment-left h2 {
+  font-size: 25px;
+  font-weight: 400;
+  color: green;
+}
+
+.payment-middle {
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  margin-top: 20px;
+}
+.payment-info-left {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.payment-info-left p {
+  color: gray;
+}
+.payment-info-right {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.payment-info-right p {
+  color: gray;
+}
+
+.payment-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.payment-bottom button {
+  width: 100px;
+  height: 50px;
+  margin-left: 15px;
+  border-radius: 7px;
+  background-color: rgb(77, 143, 231);
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: white;
+}
