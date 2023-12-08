@@ -29,7 +29,7 @@ const Hero = () => {
                     </div>
                 </div>
                 <div className="header-right">
-                    <img src={img_main1} />
+                    <img src={img_main1} alt='mainImg' />
                 </div>
             </div>
         </header>

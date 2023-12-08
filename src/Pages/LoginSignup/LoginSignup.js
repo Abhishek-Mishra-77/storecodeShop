@@ -18,11 +18,9 @@ const LoginSignup = () => {
             let URL;
             if (login) {
                 URL = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDLjHbIGbxJvyLOJJep_8c_WkMgAeNIdAg'
-                console.log('This is login')
             }
             else {
                 URL = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDLjHbIGbxJvyLOJJep_8c_WkMgAeNIdAg'
-                console.log('this is signup')
             }
 
             const response = await fetch(URL, {

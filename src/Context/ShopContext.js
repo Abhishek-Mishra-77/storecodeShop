@@ -253,8 +253,6 @@ const ShopContextProvider = (props) => {
             address: address_country,
             id: id
         }
-        console.log(payInfo)
-        console.log(data);
         setPaymentInfo(payInfo);
     }
 
