@@ -36,7 +36,6 @@ const LoginSignup = () => {
             })
 
             if (response.ok) {
-                const data = await response.json();
                 const userDetails = {
                     email: inputEmail,
                     password: inputPassword,
@@ -106,11 +105,11 @@ const LoginSignup = () => {
                         </div>
                         <div className="remeber-forgot">
                             <label><input type="checkbox" required />Remeber me</label>
-                            <a href="#">Forgot Password?</a>
+                            <a href="">Forgot Password?</a>
                         </div>
                         <button type="submit">{login ? 'Login' : 'Signup'}</button>
                         <div className="register-link">
-                            <p>Don't have an account? <a onClick={() => setLogin((login) => !login)} href="#">Register</a></p>
+                            <p>Don't have an account? <a onClick={() => setLogin((login) => !login)} href="">Register</a></p>
                         </div>
                     </form>
                 </div>

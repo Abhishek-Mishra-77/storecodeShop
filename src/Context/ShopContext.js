@@ -68,7 +68,7 @@ const ShopContextProvider = (props) => {
             }
             fetchCartItems()
         }
-    }, [userDetails])
+    }, [userDetails, modifiedEmail])
 
     // Add To cart 
     const addToCart = async (product) => {
@@ -125,7 +125,6 @@ const ShopContextProvider = (props) => {
                     })
                 });
                 if (response.ok) {
-                    const data = await response.json();
                     setCartItems((cartItems) => {
                         currItem.quantity++;
                         return [...newProducts, currItem]
@@ -216,7 +215,6 @@ const ShopContextProvider = (props) => {
             });
 
             if (response.ok) {
-                const data = await response.json();
                 setCartItems((cartItems) => {
                     return [...newProducts];
                 })

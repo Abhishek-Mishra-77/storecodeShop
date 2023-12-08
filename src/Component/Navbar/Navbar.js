@@ -57,10 +57,10 @@ const Navbar = () => {
                         <li onClick={() => setMenu("men")}><Link to='/mens' >Men</Link> {menu === "men" ? <hr /> : <></>}</li>
                         <li onClick={() => setMenu("women")}><Link to='/womens' >Women</Link>{menu === "women" ? <hr /> : <></>}</li>
                         <li onClick={() => setMenu("kids")}><Link to='/kids' >Kids</Link>{menu === "kids" ? <hr /> : <></>}</li>
-                        <li onClick={() => setToggle(false)} ><a href="#" id="close"><i className="fa-solid fa-xmark"></i></a></li>
+                        <li onClick={() => setToggle(false)} ><a href="" id="close"><i className="fa-solid fa-xmark"></i></a></li>
                         {!userDetails ? <Link to='login' id='list-login-button'><button>Login <i className="fa-solid fa-right-to-bracket"></i></button></Link> : <a onClick={() => onLogoutHandler()} id='list-login-button' to='#'><button className='user-logout' >Logout <i className="fa-solid fa-right-to-bracket"></i></button></a>}
                         <div id='userName' className='user-profile'>
-                            {userDetails ? <a href='#'>{userDetails.userName.slice(0, 8)}</a> : <a href='#'>user</a>}
+                            {userDetails ? <Link to='/'>{userDetails.userName.slice(0, 8)}</Link> : <Link to='/'>user</Link>}
                         </div>
                     </ul>
                     <div className='nav-login-cart'>
@@ -68,7 +68,7 @@ const Navbar = () => {
                         <Link to='/cart'><img src={cart_icon} alt='cart' /></Link>
                         <div className='nav-cart-count'>{totalCartItems}</div>
                         <div className='user-profile'>
-                            {userDetails ? <a href='#'>{userDetails.userName.slice(0, 8)}</a> : <a href='#'>user</a>}
+                            {userDetails ? <Link to='/'>{userDetails.userName.slice(0, 8)}</Link> : <Link to='/'>user</Link>}
                         </div>
                         <i onClick={() => toggleHandler()} id="toggle" className="fa-solid fa-bars"></i>
                     </div>
