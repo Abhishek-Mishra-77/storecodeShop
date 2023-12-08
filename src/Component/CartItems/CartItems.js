@@ -1,13 +1,22 @@
-import React, { useContext, useDebugValue } from 'react';
+import React, { useContext } from 'react';
 import './CartItems.css';
 import { ShopContext } from '../../Context/ShopContext';
 import StripeCheckout from 'react-stripe-checkout';
 
 
 const CartItems = () => {
-    const { cartItems, userDetails, addToCart, paymentPageHandler, totalPrice, removeCartItemHandler, decrementToCart } = useContext(ShopContext)
+    const {
+        cartItems,
+        userDetails,
+        addToCart,
+        paymentPageHandler,
+        totalPrice,
+        removeCartItemHandler,
+        getPaymentInfoHandlder,
+        decrementToCart } = useContext(ShopContext)
 
     const onToken = (token) => {
+        getPaymentInfoHandlder(token)
         paymentPageHandler()
     }
 
@@ -81,6 +90,8 @@ const CartItems = () => {
                         amount={totalPrice + "00"}
                         allowRememberMe
                         token={onToken}
+                        shippingAddress
+                        billingAddress={false}
                         stripeKey="pk_test_51OKItmSIeTa6z5FVc03TQk2ilyBGtK9EYPds8a3rq2SEFpQ0kRS7BwoL4BQn69OF86a2XkULaReKTlsE1PrLJwqq007edzU8ao"
                     >
                         <button>PROCEED TO CHECKOUT</button>

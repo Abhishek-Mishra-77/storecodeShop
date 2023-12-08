@@ -10,6 +10,7 @@ const ShopContextProvider = (props) => {
     const [totalPrice, setTotalPrice] = useState(0);
     const [cartItems, setCartItems] = useState([]);
     const [paymentDone, setPayementDone] = useState(false);
+    const [paymentInfo, setPaymentInfo] = useState(null);
     const modifiedEmail = userDetails && userDetails.email.replace(/[@.]/g, '');
 
     // Logic of cart items 
@@ -241,6 +242,23 @@ const ShopContextProvider = (props) => {
     }
 
 
+    const getPaymentInfoHandlder = (data) => {
+        const { created, email, id } = data;
+        const { name, address_country } = data.card;
+        const payInfo = {
+            AmountPaid: totalPrice,
+            name: name,
+            email: email,
+            created: created,
+            address: address_country,
+            id: id
+        }
+        console.log(payInfo)
+        console.log(data);
+        setPaymentInfo(payInfo);
+    }
+
+
     const paymentPageHandler = () => {
         setPayementDone((paymentDone) => !paymentDone)
     }
@@ -270,6 +288,8 @@ const ShopContextProvider = (props) => {
         decrementToCart,
         paymentDone,
         paymentPageHandler,
+        paymentInfo,
+        getPaymentInfoHandlder
     };
 
 

@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './PaymentDone.css';
 import { useNavigate } from 'react-router-dom';
+import { ShopContext } from '../../Context/ShopContext';
 
 const PaymentDone = () => {
 
+    const { paymentInfo, paymentPageHandler } = useContext(ShopContext);
+
     const navigate = useNavigate();
     const moveToShopHandler = () => {
+        paymentPageHandler()
         navigate('/')
     }
 
@@ -23,16 +27,18 @@ const PaymentDone = () => {
                         <p>userName</p>
                         <p>UPIA</p>
                         <p>Email</p>
+                        <p>Address</p>
                         <p>Amount Paid</p>
                         <p>Transaction id</p>
                     </div>
                     <div className='payment-info-right'>
                         <p>ATM Card</p>
-                        <p>Abhishek</p>
-                        <p>1212154574</p>
-                        <p>abhishek@gmail.com</p>
-                        <p>500.00</p>
-                        <p>124515875457</p>
+                        <p>{paymentInfo.name}</p>
+                        <p>{paymentInfo.created}</p>
+                        <p>{paymentInfo.email}</p>
+                        <p>{paymentInfo.address}</p>
+                        <p>{paymentInfo.AmountPaid}</p>
+                        <p>{paymentInfo.id}</p>
                     </div>
                 </div>
                 <div className='payment-bottom'>

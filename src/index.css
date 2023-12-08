@@ -363,4 +363,16 @@ a {
   .relatedproduct-item {
     margin-top: 1rem !important;
   }
+  .payment-middle {
+    width: 300px !important;
+  }
+  .payment-info-left p {
+    font-size: 12px;
+  }
+  .payment-info-right p {
+    font-size: 12px;
+  }
+  .payment-bottom {
+    margin-right: 4rem;
+  }
 }
