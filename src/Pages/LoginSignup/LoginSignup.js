@@ -4,7 +4,7 @@ import { ShopContext } from '../../Context/ShopContext';
 import { useNavigate } from 'react-router-dom';
 
 const LoginSignup = () => {
-    const { userAuthenitcationHandler } = useContext(ShopContext);
+    const { userAuthenitcationHandler, userLogoutHandler } = useContext(ShopContext);
     const [login, setLogin] = useState(true);
     const [inputName, setInputName] = useState('');
     const [inputEmail, setInputEmail] = useState('');
@@ -105,11 +105,11 @@ const LoginSignup = () => {
                         </div>
                         <div className="remeber-forgot">
                             <label><input type="checkbox" required />Remeber me</label>
-                            <a href="">Forgot Password?</a>
+                            <p href="">Forgot Password?</p>
                         </div>
                         <button type="submit">{login ? 'Login' : 'Signup'}</button>
-                        <div className="register-link">
-                            <p>Don't have an account? <a onClick={() => setLogin((login) => !login)} href="">Register</a></p>
+                        <div onClick={() => userLogoutHandler()} className="register-link">
+                            <p>Don't have an account? <span onClick={() => setLogin((login) => !login)}>Register</span></p>
                         </div>
                     </form>
                 </div>

@@ -39,7 +39,7 @@ const Testimonials = () => {
                         src="https://tse1.mm.bing.net/th?id=OIP.lQsa4sgRqle2a-tY3PmDogHaGM&pid=Api&rs=1&c=1&qlt=95&w=137&h=115"
                         alt="testImg" />
                 </div>
-                <a href="" className="primary-btn">See more <i className="fa-solid fa-right-long"></i></a>
+                <button className="primary-btn">See more <i className="fa-solid fa-right-long"></i></button>
             </div>
         </div>
 
