@@ -69,7 +69,7 @@ const LoginSignup = () => {
                 <div className="login-box">
                     <form onSubmit={onAuthenticationHandler}>
                         {login && <p className='login-notifi'>Please Enter Your Details✅</p>}
-                        <h2>{login ? <>Sign <span className="speColor">in</span></> : <>Sign <span span className="speColor">up</span></>}</h2>
+                        <h2>{login ? <>Sign <span className="speColor">in</span></> : <>Sign <span className="speColor">up</span></>}</h2>
                         <div className="input-box">
                             <span className="icon">
                                 <i className="fa-regular fa-user"></i>

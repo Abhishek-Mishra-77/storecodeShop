@@ -87,7 +87,7 @@ const CartItems = () => {
                         image="https://www.compliancesigns.com/media/catalog/product/p/a/payment-policies-sign-nhe-17964_1000.gif"
                         ComponentClass="div"
                         currency="INR"
-                        amount={totalPrice + "00"}
+                        amount={totalPrice}
                         allowRememberMe
                         token={onToken}
                         shippingAddress

@@ -15,16 +15,22 @@ const Navbar = () => {
 
     const toggleHandler = () => {
         setToggle((toggle) => !toggle);
+        console.log(toggle)
     }
 
 
+    console.log('line 20')
+
+
     useEffect(() => {
+        console.log('line 24')
         setLoading(true);
         setTimeout(() => {
             setLoading(false);
         }, 1000)
     }, [])
 
+    console.log('line 31')
 
 
     const onLogoutHandler = () => {
@@ -34,11 +40,10 @@ const Navbar = () => {
         }, 1000)
     }
 
-
-
     return (
         <Fragment>
             <div className='navbar'>
+                {console.log('line 49')}
                 {loading ? <HashLoader
                     color={"#36d7b7"}
                     loading={loading}
@@ -70,7 +75,7 @@ const Navbar = () => {
                         <div className='user-profile'>
                             {userDetails ? <Link to='/'>{userDetails.userName.slice(0, 8)}</Link> : <Link to='/'>user</Link>}
                         </div>
-                        <i onClick={() => toggleHandler()} id="toggle" className="fa-solid fa-bars"></i>
+                        <i onClick={toggleHandler} id="toggle" className="fa-solid fa-bars"></i>
                     </div>
                 </>}
             </div >
@@ -79,4 +84,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default Navbar;
