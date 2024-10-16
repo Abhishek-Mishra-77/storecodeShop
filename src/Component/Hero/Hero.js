@@ -20,7 +20,7 @@ const Hero = () => {
                         <span className="search-form-title">Shop with StoreCode</span>
                         <form className="search" onSubmit={onSearchProductHanler}>
                             <div className="search-form-input">
-                                <input type="text" className="search-input" placeholder="Enter Product Code" />
+                                <input disabled type="text" className="search-input" placeholder="Enter Product Code" />
                             </div>
                             <div className="search-form-button">
                                 <button>SEARCH</button>
@@ -33,7 +33,6 @@ const Hero = () => {
                 </div>
             </div>
         </header>
-
     )
 }
 
