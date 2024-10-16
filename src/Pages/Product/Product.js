@@ -7,6 +7,7 @@ import ProductDisplay from '../../Component/ProductDisplay/ProductDisplay';
 import DescriptionBox from '../../Component/DescriptionBox/DescriptionBox';
 import RelatedProducts from '../../Component/RelatedProducts/RelatedProducts';
 import LoginSignup from '../LoginSignup/LoginSignup';
+import { toast } from 'react-toastify';
 
 const Product = () => {
     const { all_product, userDetails } = useContext(ShopContext);
@@ -14,7 +15,7 @@ const Product = () => {
     const product = all_product.find((item) => item.id === Number(productId))
 
     if (!userDetails) {
-        alert('Please complete your authentication before proceeding further on the website')
+        toast.warning("You are not logged in")
         return <LoginSignup />
     }
 

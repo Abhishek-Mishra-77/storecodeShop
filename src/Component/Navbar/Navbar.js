@@ -24,7 +24,6 @@ const Navbar = () => {
 
     const toggleHandler = () => {
         setToggle((toggle) => !toggle);
-        console.log(toggle)
     }
 
 
@@ -91,10 +90,10 @@ const Navbar = () => {
             </div>
 
 
-            {(confirmationModal.error || confirmationModal.success) && <ConfirmationModal 
-            setIsConfirmationModal={setIsConfirmationModal}
-            onCancelModalHandler={onCancelModalHandler}
-             confirmationModal={confirmationModal} />}
+            {(confirmationModal.error || confirmationModal.success) && <ConfirmationModal
+                setIsConfirmationModal={setIsConfirmationModal}
+                onCancelModalHandler={onCancelModalHandler}
+                confirmationModal={confirmationModal} />}
 
         </Fragment>
 

@@ -20,7 +20,7 @@ const CartItems = () => {
         paymentPageHandler()
     }
 
-    const cartProduct = cartItems.sort((a, b) => b.quantity - a.quantity);
+    const cartProduct = cartItems?.sort((a, b) => b.quantity - a.quantity);
 
 
     return (
